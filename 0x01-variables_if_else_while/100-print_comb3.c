@@ -33,5 +33,5 @@ int main(void)
 
 	putchar(10);
 
-	return (1);
+	return (0);
 }

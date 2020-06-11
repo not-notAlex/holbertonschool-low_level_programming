@@ -21,5 +21,5 @@ int main(void)
 	else
 		printf("0 is zero\n");
 
-	return (1);
+	return (0);
 }
