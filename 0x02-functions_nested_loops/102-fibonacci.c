@@ -9,15 +9,15 @@
 int main(void)
 {
 	int a;
-	unsigned int x = 1;
-	unsigned int y = 2;
-	unsigned int t;
+	unsigned long int x = 1;
+	unsigned long int y = 2;
+	unsigned long int t;
 
 	printf("1, 2, ");
 
 	for (a = 2; a < 50; a++)
 	{
-		printf("%u", (x + y));
+		printf("%lu", (x + y));
 		if (a != 49)
 			printf(", ");
 		t = x;
