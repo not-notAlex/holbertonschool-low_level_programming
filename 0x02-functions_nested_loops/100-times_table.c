@@ -1,9 +1,7 @@
 #include "holberton.h"
-
 /**
  * print_times_table - Print the times table of given number
  * @n: size of times table
- *
  * Return: end function
  */
 void print_times_table(int n)
@@ -12,7 +10,6 @@ void print_times_table(int n)
 
 	if (n < 0 || n > 15)
 		return;
-
 	for (a = 0; a <= n; a++)
 	{
 		_putchar('0');
