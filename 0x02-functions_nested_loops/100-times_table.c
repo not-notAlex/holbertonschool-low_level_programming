@@ -8,6 +8,8 @@
  */
 void print_times_table(int n)
 {
+	int a, b, c, d, e;
+
 	if (n < 0 || n > 15)
 		return;
 
@@ -17,8 +19,6 @@ void print_times_table(int n)
 		_putchar(10);
 		return;
 	}
-
-	int a, b, c, d, e;
 
 	for (a = 0; a <= n; a++)
 	{
