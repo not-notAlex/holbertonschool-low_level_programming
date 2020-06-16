@@ -13,13 +13,6 @@ void print_times_table(int n)
 	if (n < 0 || n > 15)
 		return;
 
-	if (n == 0)
-	{
-		_putchar('0');
-		_putchar(10);
-		return;
-	}
-
 	for (a = 0; a <= n; a++)
 	{
 		_putchar('0');
