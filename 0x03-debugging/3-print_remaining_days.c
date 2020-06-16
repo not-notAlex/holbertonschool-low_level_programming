@@ -19,17 +19,17 @@ void print_remaining_days(int month, int day, int year)
 	}
 	if ((month == 6 && day > 181))
 	{
-		printf("Invalid date: %02/%02d/%04d\n", month, day - 181, year);
+		printf("Invalid date: %02d/%02d/%04d\n", month, day - 181, year);
 		return;
 	}
 	if ((month == 9 && day > 273))
 	{
-		printf("Invalid date: %02/%02d/%04d\n", month, day - 273, year);
+		printf("Invalid date: %02d/%02d/%04d\n", month, day - 273, year);
 		return;
 	}
 	if ((month == 11 && day > 334))
 	{
-		printf("Invalid date: %02/%02d/%04d\n", month, day - 334, year);
+		printf("Invalid date: %02d/%02d/%04d\n", month, day - 334, year);
 	}
 	if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
 	{
