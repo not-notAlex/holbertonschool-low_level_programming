@@ -35,6 +35,12 @@ void print_number(int n)
 	for (c = 0; c < digit; c++)
 	{
 		first = num % m;
+		if (first < m / 10)
+		{
+			_putchar('0');
+			m /= 10;
+			continue;
+		}
 		while (first >= 10)
 		{
 			first /= 10;
