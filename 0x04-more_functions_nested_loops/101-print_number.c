@@ -9,23 +9,22 @@
 void print_number(int n)
 {
 	unsigned int m, a, b, c, first, digit;
-	int num = n;
+	unsigned int num;
 
 	digit = 0;
 	m = 1;
-
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
-
-
-	if (num < 0)
+	if (n < 0)
 	{
 		_putchar(45);
-		num *= -1;
+		num = n * -1;
 	}
+	else
+		num = n;
 	for (b = 1; num / b > 0; b *= 10)
 		digit++;
 	for (a = 0; a < digit; a++)
