@@ -38,6 +38,8 @@ char *cap_string(char *str)
 			str[i + 1] = make_upper(str[i + 1]);
 		if (str[i] == 125)
 			str[i + 1] = make_upper(str[i + 1]);
+		if (str[i] == 11)
+			str[i + 1] = make_upper(str[i + 1]);
 	}
 
 	return (str);
