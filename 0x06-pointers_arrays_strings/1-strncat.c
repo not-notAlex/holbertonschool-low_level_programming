@@ -27,7 +27,6 @@ char *_strncat(char *dest, char *src, int n)
 		count++;
 		i++;
 	}
-	*dest = '\0';
 	while (count > 0)
 	{
 		dest--;
