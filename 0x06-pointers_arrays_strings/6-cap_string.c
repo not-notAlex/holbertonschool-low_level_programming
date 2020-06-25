@@ -8,40 +8,18 @@
  */
 char *cap_string(char *str)
 {
-	int i;
+	int a, b;
+	char s1[] = "\t\n ,;.!?\"(){}";
 
-	make_upper(str[0]);
+	str[0] = make_upper(str[0]);
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (a = 0; str[a] != '\0'; a++)
 	{
-		if (str[i] == 32)
-			str[i + 1] = make_upper(str[i + 1]);
-		if (str[i] == 9)
-			str[i + 1] = make_upper(str[i + 1]);
-		if (str[i] == 10)
-			str[i + 1] = make_upper(str[i + 1]);
-		if (str[i] == 44)
-			str[i + 1] = make_upper(str[i + 1]);
-		if (str[i] == 59)
-			str[i + 1] = make_upper(str[i + 1]);
-		if (str[i] == 46)
-			str[i + 1] = make_upper(str[i + 1]);
-		if (str[i] == 33)
-			str[i + 1] = make_upper(str[i + 1]);
-		if (str[i] == 63)
-			str[i + 1] = make_upper(str[i + 1]);
-		if (str[i] == 34)
-			str[i + 1] = make_upper(str[i + 1]);
-		if (str[i] == 40)
-			str[i + 1] = make_upper(str[i + 1]);
-		if (str[i] == 41)
-			str[i + 1] = make_upper(str[i + 1]);
-		if (str[i] == 123)
-			str[i + 1] = make_upper(str[i + 1]);
-		if (str[i] == 125)
-			str[i + 1] = make_upper(str[i + 1]);
-		if (str[i] == 11)
-			str[i + 1] = make_upper(str[i + 1]);
+		for (b = 0; s1[b] != '\0'; b++)
+		{
+			if (str[a] == s1[b])
+				str[a + 1] = make_upper(str[a + 1]);
+		}
 	}
 
 	return (str);
