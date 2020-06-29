@@ -18,7 +18,7 @@ char *_strchr(char *s, char c)
 		count++;
 	}
 
-	while (count > 0)
+	while (count >= 0)
 	{
 		count--;
 		s--;
