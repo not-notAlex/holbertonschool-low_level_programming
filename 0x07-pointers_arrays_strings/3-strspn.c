@@ -24,9 +24,7 @@ unsigned int _strspn(char *s, char *accept)
 			if (s[a] == accept[b])
 				ans++;
 			if (count == ans)
-			{
 				return (a + 1);
-			}
 		}
 	}
 
