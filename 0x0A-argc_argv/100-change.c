@@ -9,7 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int sum = 0, num, coin = 0;
+	long unsigned int sum = 0, num;
+	int coin = 0;
 
 	if (argc != 2)
 	{
