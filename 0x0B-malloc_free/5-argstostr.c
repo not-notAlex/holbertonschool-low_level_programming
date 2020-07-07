@@ -15,7 +15,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (a = 1; a < ac; a++)
+	for (a = 0; a < ac; a++)
 	{
 		size = 0;
 		while (av[a][size])
@@ -29,7 +29,7 @@ char *argstostr(int ac, char **av)
 	if (ar == NULL)
 		return (NULL);
 	size = 0;
-	for (a = 1; a < ac; a++)
+	for (a = 0; a < ac; a++)
 	{
 		for (b = 0; av[a][b]; b++)
 		{
