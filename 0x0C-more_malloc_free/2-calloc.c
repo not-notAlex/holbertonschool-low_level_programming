@@ -6,9 +6,10 @@
  * @size: number of data types
  * Return: no return
  */
-void *_kalloc(unsigned int nmemb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *ar;
+	char *ar;
+	unsigned int i;
 
 	if (nmemb < 1 || size < 1)
 		return (NULL);
@@ -17,5 +18,8 @@ void *_kalloc(unsigned int nmemb, unsigned int size)
 	if (ar == NULL)
 		return (NULL);
 
-	return (ar);
+	for (i = 0; i < nmemb * size; i++)
+		ar[i] = 0;
+
+	return ((void *) ar);
 }
