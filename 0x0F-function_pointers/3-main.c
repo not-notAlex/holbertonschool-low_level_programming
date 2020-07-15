@@ -16,8 +16,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
+	ptr = get_op_func(argv[2]);
 	n = argv[2][0];
-	if (!(n == 43 || n == 45 || n == 47 || n == 42 || n == 37))
+	if (ptr == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
@@ -28,7 +29,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	ptr = get_op_func(argv[2]);
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	total = (*ptr)(a, b);
