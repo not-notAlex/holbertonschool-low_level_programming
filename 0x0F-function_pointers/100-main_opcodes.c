@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdint.h>
 
 /**
  * main - The code
@@ -29,7 +30,7 @@ int main(int argc, char *argv[])
 		return (0);
 	for (i = 0; i < num; i++)
 	{
-		unsigned char *ptr = (main + i);
+		unsigned char ptr = (uintptr_t)(main + 1);
 
 		codes[i] = ptr;
 	}
