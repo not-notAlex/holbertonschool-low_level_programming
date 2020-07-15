@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	m = atoi(argv[3]);
-	if ((n == 47 && m == 0) || (n == 37 && m ==0))
+	if ((n == 47 && m == 0) || (n == 37 && m == 0))
 	{
 		printf("Error\n");
 		exit(100);
