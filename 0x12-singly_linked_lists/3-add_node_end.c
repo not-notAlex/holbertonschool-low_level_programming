@@ -12,23 +12,28 @@ list_t *add_node_end(list_t **head, const char *str)
 	char *newstr;
 	list_t *item, *tmp;
 
-	while (str[len])
-		len++;
-	newstr = malloc(len + 1);
-	if (newstr == NULL)
+	if (str != NULL)
 	{
-		printf("Error\n");
-		return (NULL);
+		while (str[len])
+			len++;
+		newstr = malloc(len + 1);
+		if (newstr == NULL)
+		{
+			printf("Error\n");
+			return (NULL);
+		}
+		item = malloc(sizeof(list_t));
+		if (item == NULL)
+		{
+			printf("Error\n");
+			return (NULL);
+		}
+		for (len = 0; str[len]; len++)
+			newstr[len] = str[len];
+		newstr[len] = '\0';
 	}
-	item = malloc(sizeof(list_t));
-	if (item == NULL)
-	{
-		printf("Error\n");
-		return (NULL);
-	}
-	for (len = 0; str[len]; len++)
-		newstr[len] = str[len];
-	newstr[len] = '\0';
+	else
+		newstr = NULL;
 	item->str = newstr;
 	item->len = len;
 	item->next = NULL;
