@@ -8,9 +8,8 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int i;
+	int i, numwrite, numread;
 	char *buf;
-	unsigned int numwrite, numread;
 
 	if (filename == NULL)
 		return (0);
@@ -33,7 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	numwrite = write(STDOUT_FILENO, buf, numread);
-	if (numwrite != letters)
+	if (numwrite == -1)
 	{
 		free(buf);
 		close(i);
