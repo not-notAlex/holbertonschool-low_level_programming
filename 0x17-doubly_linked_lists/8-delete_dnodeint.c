@@ -12,7 +12,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	unsigned int i = 1;
 
 	if (*head == NULL)
-		return (-1);
+		return (1);
 	if (ptr1 != NULL)
 		ptr2 = ptr1->next;
 	if (index == 0)
